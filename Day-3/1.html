@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #xyz{
+            /* 4 properties - top right bottom left */
+            /* 2 properties - top&bottom left&right */
+            /* 1 properties - all sides */
+
+            /* margin:70px 10px 20px 5px; */
+            margin:70px 10px;
+            /* padding:2px 10px 20px 50px; */
+            padding-top: 20px;
+            padding-left: 20px;
+
+            border: 20px;
+            border-color: rgb(54, 21, 144);
+            border-style:solid;
+            border-radius: 20px;
+            
+            font-size: large;
+        }
+        #click{
+            padding:8px 12px;
+            background-color: green;
+            border:0px;
+            border-radius: 12px;
+            color: white;
+            cursor: pointer;
+        }
+        #click:hover{
+            background-color: rgb(32, 178, 32);
+            transform: translate(5px,5px);
+        }
+    </style>
+</head>
+<body>
+    <button id="xyz">Click here</button>
+    <br/>
+    <button id="click">Click here</button>
+</body>
+</html>

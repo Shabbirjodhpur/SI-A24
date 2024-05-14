@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            width:70vw;
+            height:20vh;
+            border:1px solid black;
+            display: flex;
+        }
+        .square{
+            width: 33%;
+            height:100%;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 64px;
+        }
+        .win{
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="square win">X</div>
+        <div class="square">O</div>
+        <div class="square">X</div>
+    </div>
+    <div class="wrapper">
+        <div class="square">X</div>
+        <div class="square win">X</div>
+        <div class="square">O</div>
+    </div>
+    <div class="wrapper">
+        <div class="square">O</div>
+        <div class="square">X</div>
+        <div class="square win">X</div>
+    </div>
+</body>
+</html>
