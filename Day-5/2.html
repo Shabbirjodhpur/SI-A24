@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .shabbir {
+            border: 1px solid black;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        p {
+            border: 1px solid black;
+        }
+        .cfi{
+            display: flex;
+            justify-content: space-around;
+            border: 1px solid black;
+        }
+        .cfi > p {
+            width:33%;
+        }
+        #large{
+            width: 70%;
+        }
+        @media screen and (max-width:800px) and (min-width:600px) {
+            .shabbir{
+                grid-template-columns: 1fr 1fr;
+            }            
+        }
+
+        @media screen and (max-width:600px){
+            .shabbir{
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="shabbir">
+        <p>Logo</p>
+        <p>LOGIN</p>
+        <p>LOGIN</p>
+        <p>LOGIN</p>
+    </div>
+
+    <!-- <div class="cfi">
+        <p>Logo</p>
+        <p id="large">LOGIN</p>
+        <p>LOGIN</p>
+    </div> -->
+
+</body>
+
+</html>
