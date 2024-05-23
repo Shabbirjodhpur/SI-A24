@@ -1,0 +1,5 @@
+1. write a logic to store all numbers that are multiple of 3 from 0 to 100 in a array
+
+2. write a function to loop from 0 to 100 and print it
+
+
