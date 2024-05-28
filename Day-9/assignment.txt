@@ -1,0 +1,10 @@
+ASSIGNMENT 1:
+    FIGMA UI:
+        -> Mubashir & Omer ---- LOGIN PAGE
+        -> JUNAID & ISMAIL ------ SIGNUP PAGE 
+        -> FURQAN & SAAD ------- FORGET PASSWORD ---- RESET PASSWORD
+        -> Viveka & sumaiya ------- SUBMIT ASSIGNMENT
+        -> ANSHA & ASMA ----------- DASHBOARD
+
+ASSIGNMENT 2:
+    -> Code Tic Tac Toe

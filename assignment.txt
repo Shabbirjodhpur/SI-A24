@@ -1,4 +1,0 @@
-1. make a login page with nice css
-2. read the input boxes
-3. research on how to use post in html
-4. using POST -pass the user and type values to https://abaya-looks-backend.vercel.app/api/v1/test
