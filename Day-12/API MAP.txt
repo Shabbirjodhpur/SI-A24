@@ -1,3 +1,4 @@
-GET        /api/todo       GET ALL TODOS
-POST       /api/todo       ADD A TODO
-PATCH      /api/todo/:id   MODIFY STATUS OF id
+GET         /api/todo       GET ALL TODOS
+POST        /api/todo       ADD A TODO
+PATCH       /api/todo/:id   MODIFY STATUS OF id
+DELETE      /api/todo/:id   DELETE todo with id
