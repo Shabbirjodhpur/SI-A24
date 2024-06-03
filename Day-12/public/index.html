@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <h1>TODO APP</h1>
+    <input type="text" id="userInput" />
+    <button id="addBtn">CLICK ON ME TO ADD TODO</button>
+    <div id="container"></div>
+
+    <script>
+        function modifyStatus(num){
+            const response = fetch(`http://localhost:3000/api/todo/${num}`, {
+                method: "PATCH",
+                headers: {
+                    "Content-Type": "application/json",
+                }
+            }).then(res => {
+                // window.location.replace('./2.html')
+                res.text().then(data => {
+                    alert("Todo modified successfully")
+                    window.location.reload()
+                })
+            })
+        }
+        document.getElementById("addBtn").addEventListener("click", () => {
+            const response = fetch("http://localhost:3000/api/todo", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    todo: document.getElementById("userInput").value
+                })
+            }).then(res => {
+                // window.location.replace('./2.html')
+                res.text().then(data => {
+                    alert("Todo added successfully")
+                    window.location.reload()
+                })
+            }).catch(err => {
+                alert('wrong credential')
+            })
+        })
+
+
+        const response = fetch("http://localhost:3000/api/todo", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            }
+        }).then(res => {
+            res.json().then(data => {
+                for (let i = 0; i < data.length; i++) {
+                    const newDiv = document.createElement('div')
+                    const newP1 = document.createElement('p')
+                    const newP2 = document.createElement("INPUT");
+                    newP2.setAttribute("type", "checkbox");
+                    newP2.addEventListener('click',()=>modifyStatus(i))
+
+                    newP1.innerText = data[i].todo
+                    newP2.checked = data[i].isDone
+
+                    newDiv.appendChild(newP2)
+                    newDiv.appendChild(newP1)
+                    newDiv.style.display = 'flex'
+
+                    document.body.appendChild(newDiv)
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
